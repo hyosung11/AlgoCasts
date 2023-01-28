@@ -101,3 +101,10 @@ debug>
 (To exit, press Ctrl+C again or Ctrl+D or type .exit)
 debug>
 ```
+
+### Common String Questions
+
+1. What is the most common character in a string?
+2. Does string A have the same characters as string B (is it an anagram)?
+3. Does the given string have any repeated characters in it?
+
