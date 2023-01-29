@@ -108,3 +108,9 @@ debug>
 2. Does string A have the same characters as string B (is it an anagram)?
 3. Does the given string have any repeated characters in it?
 
+### RegEx
+
+```js
+const word = 'HI THERE!!!!!';
+word.replace(/[^\w]/g, '').toLowerCase() // hithere
+```
