@@ -68,7 +68,7 @@ function steps(num, row = 0, stair = '') {
     return steps(num, row + 1);
   }
 
-  const add = stair.length <= row ? '#': ' ';
+  const add = stair.length <= row ? '#' : ' ';
   steps(num, row, stair + add);
 }
 
