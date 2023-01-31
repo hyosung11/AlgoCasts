@@ -34,6 +34,22 @@
 
 //     for (let column = 0; column < num; column += 1) {
 //       if (column <= row) {
+//         stair += '#';
+//       } else {
+//         stair += ' ';
+//       }
+//     }
+
+//     console.log(stair);
+//   }
+// }
+
+// function steps(num) {
+//   for (let row = 0; row < num; row += 1) {
+//     let stair = '';
+
+//     for (let column = 0; column < num; column += 1) {
+//       if (column <= row) {
 //         stair += `#`;
 //       } else {
 //         stair += ` `;
@@ -60,16 +76,40 @@
 //   steps(num, row, stair);
 // }
 
+// function steps(num, row = 0, stair = '') {
+//   if (num === row) return;
+
+//   if (num === stair.length) {
+//     console.log(stair);
+//     return steps(num, row + 1);
+//   }
+
+//   const add = stair.length <= row ? '#' : ' ';
+//   steps(num, row, stair + add);
+// }
+
+/* Recursive Version
+
+- if (row === n) then we have hit the end of our problem
+- if the `stair` string has length === n then we are at the end of a row
+- If the length of the stair string is less than or equal to the row number we're working on, we add a '#', otherwise, add a space
+*/
+
 function steps(num, row = 0, stair = '') {
   if (num === row) return;
 
   if (num === stair.length) {
     console.log(stair);
-    return steps(num, row + 1);
+    return steps(num, row + 1)
   }
 
-  const add = stair.length <= row ? '#' : ' ';
-  steps(num, row, stair + add);
+  if (stair.length <= row) {
+    stair += '#';
+  } else {
+    stair += ' ';
+  }
+  steps(num, row, stair);
 }
 
 module.exports = steps;
+

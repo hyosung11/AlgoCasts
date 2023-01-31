@@ -123,12 +123,68 @@ word.replace(/[^\w]/g, '').toLowerCase() // hithere
 4. Do some work. Call your function again, making sure the arguments have changed in some fashion.
 
 ```js
-function printNumber(num) {
+function printNumber(num, decrement = 1) {
   if (num === 0) return;
 
   console.log(num)
-  printNumber(n - 1);
+  printNumber(n - 1, decrement);
 }
 
 printNumber(10);
 ```
+
+### Runtime Complexity
+
+- Runtime complexity describes the performance of an algorithm
+
+- How much more processing power/time is required to run your algorithm if we double the inputs?
+
+
+Name | Notation | Description
+---------|----------|---------
+ Constant Time | 1 | Regardless of elements, takes the same amount of time
+ Logarithmic Time | log(n) | Doubling the number of elements to iterate over doesn't double the amount of work. Searching operations are log(n)
+ A3 | B3 | C3
+ A3 | B3 | C3
+ 
+#### String Reverse
+
+```js
+function reverse(str) {
+  let reversed = '';
+
+  for (let character of str) {
+    reversed = character + reversed;
+  }
+
+  return reversed;
+}
+```
+
+abc --> cba
+abcdefghijklmnopqrstuvwxyz --> zyxwvutsrqponmlkjihgfedcab
+
+Each additional character = 1 step through 1 loop
+This is N or linear runtime.
+
+#### Steps
+
+```js
+function steps(num) {
+  for (let row = 0; row < num; row += 1) {
+    let stair = '';
+
+    for (let column = 0; column < num; column += 1) {
+      if (column <= row) {
+        stair += '#';
+      } else {
+        stair += ' ';
+      }
+    }
+
+    console.log(stair);
+  }
+}
+```
+
+As 'n' increased by one, steps increased n * n. This is N^2 or quadratic runtime.
