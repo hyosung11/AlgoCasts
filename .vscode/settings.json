@@ -3,5 +3,8 @@
     "activityBar.background": "#2D2B45",
     "titleBar.activeBackground": "#3F3C61",
     "titleBar.activeForeground": "#FBFBFC"
-  }
+  },
+  "cSpell.words": [
+    "Quasilinear"
+  ]
 }
