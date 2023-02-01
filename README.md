@@ -216,3 +216,7 @@ As 'n' increased by one, steps increased n * n. This is N^2 or quadratic runtime
 
 - Store the arguments of each function call along with the result. If the function is called again with the same arguments, return the precomputed result, rather than running the function again.
 
+### Data Structures
+
+- Ways of organizing information with optimal runtime complexity for adding or removing records
+- JavaScript natively implements several data structures. You will still be asked about 'inferior' data structures.
