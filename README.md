@@ -220,3 +220,9 @@ As 'n' increased by one, steps increased n * n. This is N^2 or quadratic runtime
 
 - Ways of organizing information with optimal runtime complexity for adding or removing records
 - JavaScript natively implements several data structures. You will still be asked about 'inferior' data structures.
+
+### Linked Lists
+
+A linked list is an ordered collection of data. The collection contains a number of different nodes. Each node contains some amount of data, along with a reference to the next node.
+
+Head Node --> Data --> Data --> Tail Node --> null
