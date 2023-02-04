@@ -1,6 +1,6 @@
 # AlgoCasts
 
-Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/)
+Companion repo to [The Coding Interview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/)
 
 ## Notes
 
@@ -227,6 +227,27 @@ A linked list is an ordered collection of data. The collection contains a number
 
 Head Node --> Data --> Data --> Tail Node --> null
 
+Use two pointers to solve linked list problems:
+
+```js
+function fromLast(list, n) {
+  let slow = list.getFirst();
+  let fast = list.getFirst();
+
+  while (n > 0) {
+    fast = fast.next;
+    n -= 1;
+  }
+
+  while (fast.next) {
+    slow = slow.next;
+    fast = fast.next;
+  }
+
+  return slow;
+}
+```
+
 ### Generators
 
 Example 1
@@ -291,3 +312,9 @@ for (let value of tree.printValues()) {
 
 console.log(values); // [ 1, 2, 4, 3 ]
 ```
+
+### Trees
+
+Trees consist of nodes. The node of a tree holds some amount of data and a reference to all of its children. A child is any node that is directly underneath a given node. Different nodes on a tree have a parent-child relationship. Nodes at a given level with the same parent are referred to as siblings.
+
+Traversal means to iterate through a tree. There are different orders of traversal.
