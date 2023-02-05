@@ -318,3 +318,19 @@ console.log(values); // [ 1, 2, 4, 3 ]
 Trees consist of nodes. The node of a tree holds some amount of data and a reference to all of its children. A child is any node that is directly underneath a given node. Different nodes on a tree have a parent-child relationship. Nodes at a given level with the same parent are referred to as siblings.
 
 Traversal means to iterate through a tree. There are different orders of traversal.
+
+Breadth-first Traversal
+
+- start at top level
+- move from left to right across each level (regardless of whether nodes are siblings of each other)
+- examples:
+  - corporate leadership hierarchy chart
+  - military leadership chart
+
+Depth-first Traversal
+
+- start at very top of the tree
+- go down the very left hand side as far as we can go
+- from the bottom go back up to the closest parent and then go back down again
+- then go back to the top of the tree and repeat with the next side
+
