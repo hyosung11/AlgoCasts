@@ -334,3 +334,21 @@ Depth-first Traversal
 - from the bottom go back up to the closest parent and then go back down again
 - then go back to the top of the tree and repeat with the next side
 
+### Binary Search Trees
+
+- Every node can have at most two children.
+- We refer to the children by their relative position to the parent node: left or right
+- Values are organized relative to each other
+  - Binary Tree does not have this requirement
+
+- Binary Search Tree Structure
+  - Parent Node [value | data | key]
+    - child nodes [left | right]
+    - value > left.value | value < right.value
+
+- Interview Questions
+  - How do you add new nodes?
+    - Ask if we're working with a binary search tree or just a binary tree
+  - How do you check for a value?
+  - How do you validate a binary search tree?
+
