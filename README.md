@@ -360,3 +360,54 @@ type | - | result
  'click' | --> | [ callback ] [ callback ] [ callback ]
  'hover' | --> | [ callback ]
  'exit' | --> | [ callback ] [ callback ]
+
+### Design Question - Building Twitter
+
+- High Level Notes
+  - There is no right answer
+  - Every interviewer will expect a different answer
+    - Ask the interviewer what to focus on
+  - Focus is usually on the data model
+    - How would you build out a database?
+      - How would you store users?
+      - How would you store tweets?
+  - Don't mention specific technologies
+    - Why would you pick specific technologies?
+      - E.g., I would use a web framework on the front end because I would need something that could easily render out a list of tweets and it would have to work well on mobile
+    - List out the qualities or attributes of a particular framework
+  - Draw stuff
+    - make diagrams (e.g., sketch of twitter)
+  - Talk
+    - Interviewer wants to gauge your ability to communicate about complicated topics
+
+- General Strategy
+  - Identify two core features
+    - How does a tweet work?
+    - How does the user feed work?
+  - Possible implementation
+    - What does a tweet look like in a DB?
+    - How to make the '#topic' and @mention systems?
+    - How to implement retweets?
+    - How to show interesting tweets at the top of the feed?
+  - Identify and address difficulties
+    - What's the biggest challenge?
+      - E.g., deciding what tweets to show to a user
+  - Solutions for scaling
+    - E.g., scaling users
+      - caching the database
+        - User ABC
+          - Server
+            --> Memory Store
+            --> Database
+      - Deployment Options
+        - User
+          - Load Balancer - horizontal scaling for application
+            - Server 1
+            - Server 2
+            - Server 3
+              - Database
+
+### Sorting Algorithms
+
+- According to Stephen not high priority interview question regarding actual implementation
+
