@@ -411,3 +411,50 @@ type | - | result
 
 - According to Stephen not high priority interview question regarding actual implementation
 
+Name | Worst Case Runtime | Difficulty
+---------|----------|---------
+ Bubble Sort | n^2 | easiest
+ Selection Sort | n^2 | easier
+ Merge Sort | n*log(n) | medium
+
+#### Bubble Sort
+
+- finds the largest element in the array and drags it over to the far right hand side
+
+- Array [10, -30, 97, 0, 5]
+
+- Algorithm
+  - iterate over outer loop from idx = 0 to < array's length
+    - iterate over inner loop from jdx = 0 to array's length - 1
+      - if the element at jdx is greater than jdx + 1
+        - swap elements at jdx and jdx + 1
+
+#### Selection Sort
+
+- prove me wrong algorithm
+
+- Algorithm
+  - iterate from idx = 0 to less than array's length
+    - assume the element at idx is the least in the array, assign idx to `indexOfMin`
+    - iterate inner loop from jdx = idx + 1 to end of array
+      - see if there is an element with a lower value
+        - if there is, record its index
+    - if the index of the current element and the index of the lowest element is not the same, swap them
+
+#### Merge Sort
+
+- usually solved with a recursive function
+
+- Merge (Merger) Algorithm
+  - create `results` array
+  - while there are still elements in both arrays
+    - if the first element in the left half is less than the first in the right half
+      - `shift` the elements from left into `results` array
+    - else
+      - `shift` the element from the right into `results` array
+  - take everything from the array that still has elements in it and put in `results` array
+
+- Merge Sort Algorithm
+  - uses recursion and the `merge` function
+
+Completed Course on 20230209 17:32
