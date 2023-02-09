@@ -347,8 +347,16 @@ Depth-first Traversal
     - value > left.value | value < right.value
 
 - Interview Questions
-  - How do you add new nodes?
+  - How do you *add* new nodes?
     - Ask if we're working with a binary search tree or just a binary tree
-  - How do you check for a value?
-  - How do you validate a binary search tree?
+  - How do you *check* for a value?
+  - How do you *validate* a binary search tree?
 
+### Events
+
+`this.events`
+type | - | result
+---------|----------|---------
+ 'click' | --> | [ callback ] [ callback ] [ callback ]
+ 'hover' | --> | [ callback ]
+ 'exit' | --> | [ callback ] [ callback ]
